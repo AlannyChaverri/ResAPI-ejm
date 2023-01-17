@@ -16,6 +16,10 @@ app.use(express.json());
 
 // Routes
 app.use(require("./routes/index"));
+// para que carge la ruta /api/
+app.use("/api/peliculas", require("./routes/peliculas"));
+// usuarios
+app.use("/api/users", require("./routes/users"));
 
 //iniciar el server
 app.listen(app.get("port"), () => {
